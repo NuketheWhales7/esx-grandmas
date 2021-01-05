@@ -3,11 +3,9 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 RegisterServerEvent('devrp-grandmas:payBill')
 AddEventHandler('devrp-grandmas:payBill', function()
-    local src = source
-	local xPlayer = ESX.GetPlayerFromId(src)
-	--change price here for revive
-	xPlayer.removeAccountMoney('bank', Config.FineAmount)
-  --  TriggerClientEvent('esx:showNotification', src, '~w~You Were Billed For ~r~$1,000~w~.')
+  local src = source
+  local xPlayer = ESX.GetPlayerFromId(src)
+  xPlayer.removeAccountMoney('bank', Config.FineAmount)
   TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You paid $'..Config.FineAmount..' in medical supplies', length = 2500 })
 end)
 
