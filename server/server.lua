@@ -6,7 +6,7 @@ AddEventHandler('devrp-grandmas:payBill', function()
     local src = source
 	local xPlayer = ESX.GetPlayerFromId(src)
 	--change price here for revive
-	xPlayer.removeAccountMoney('bank', 1000)
+	xPlayer.removeAccountMoney('bank', Config.FineAmount)
   --  TriggerClientEvent('esx:showNotification', src, '~w~You Were Billed For ~r~$1,000~w~.')
   TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = 'You paid $1000 in medical supplies', length = 2500 })
 end)
