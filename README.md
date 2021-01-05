@@ -2,6 +2,8 @@
 
 ## Requirements
 - ES_Extended
+- mythic_notify
+- mythic_progressbars
 
 ### Config
 check the config to change the values
